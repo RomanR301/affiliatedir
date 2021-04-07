@@ -1,12 +1,238 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1020;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  &-top {
+    padding: 15px 0;
+    background: $whiteColor;
+    & .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &-bottom {
+    background: #f5f5f5;
+  }
+  &-logo {
+    display: flex;
+    width: 140;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &-control {
+    display: flex;
+    align-items: center;
+  }
+  &-lang {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    select {
+      width: 100%;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      color: $defaultText;
+      font-weight: bold;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    &:after {
+      content: "\e900";
+      font-family: 'icomoon';
+      position: absolute;
+      right: 0;
+      margin-left: 4px;
+      font-size: 10px;
+      pointer-events: none;
+    }
+  }
+  &-cta {
+    margin-left: 15px;
+  }
+}
+.search {
+  & input {
+    background: transparent;
+    border: 1px solid transparent;
+    height: 100%;
+    width: 240px;
+    padding: 2px 30px 2px 12px;
+    outline: none;
+    color: #f5f5f5;
+    border-radius: 4px;
+    // cursor: default;
+    pointer-events: none;
+    &::placeholder {
+      color: #f5f5f5;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { 
+     color: #f5f5f5;
+    }
+    
+    &::-ms-input-placeholder {
+     color: #f5f5f5;
+    }
+  }
+  & .form-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 30px;
+    pointer-events: auto;
+    &.active {
+      & input {
+        background: #FBFBFB;
+        color: $defaultText;
+        cursor: text;
+        pointer-events: auto;
+        border-color: 1px solid #ECECEC;
+        &::placeholder {
+          color: $defaultText;
+          opacity: 1;
+        }
+        &:-ms-input-placeholder { 
+         color: $defaultText;
+        }
+        
+        &::-ms-input-placeholder {
+         color: $defaultText;
+        }
+      }
+    }
+  }
+  & i {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    &:hover {
+      ~ input {
+        pointer-events: auto;
+      }
+    }
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+  &-item {
+    margin: 0 30px 0 0
+  }
+  &__link {
+    font-size: 14px;
+    color: $blackColor;
+    line-height: 1;
+    padding: 13px 0;
+    display: block;
+    @include transition(.3);
+    &:before {
+
+    }
+    &:after {
+
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.0001);
+      color: $darkGreen;
+      box-shadow: inset 0px -2px 0px #1A4540;
+    }
+  }
+}
+.sub-menu {
+  position: absolute;
+  min-width: 300px;
+  opacity: 0;
+  visibility: hidden;
+  background: #FFFFFF;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.1);
+  border-radius: 4px;
+  transform: translate(-10px, 0);
+  @include transition(.3);
+  & .menu-item {
+    margin: 0;
+    &.border-bottom {
+      box-shadow: inset 0px -1px 0px rgba(189, 189, 189, 0.5);
+    }
+  }
+  & .menu__link {
+    padding: 12px 20px;
+    line-height: 1.1;
+    &:hover {
+      background: $primaryColor;
+      color: $whiteColor;
+    }
+  }
+}
+.menu-item-has-children {
+  align-items: center;
+  position: relative;
+  margin-right: 45px;
+  &:after {
+    content: "\e900";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 14px;
+    right: -18px;
+    margin-left: 4px;
+    font-size: 10px;
+    pointer-events: none;
+    @include transition(.3);
+  }
+  &.hovered {
+    &:after {
+      transform: rotate(180deg);
+    }
+    & .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
+    & > .menu__link {
+      background: rgba(0, 0, 0, 0.0001);
+      color: $darkGreen;
+      box-shadow: inset 0px -2px 0px #1A4540;
+    }
+  }
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
 .body-padding {
   padding-top: 70px;
   @media (min-width: $breakpoint-xxl) {
     padding-top: 90px;
   }
 }
+
 
 
 

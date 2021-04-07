@@ -19,9 +19,6 @@
 }
 
 @mixin transition($time) {
-  -webkit-transition: all $time + 0s ease-out;
-  -moz-transition: all $time + 0s ease-out;
-  -o-transition: all $time + 0s ease-out;
   transition: all $time + 0s ease-out;
 }
 
@@ -34,9 +31,6 @@
 }
 
 @mixin grid-size($size) {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 $size;
-  -ms-flex: 0 0 $size;
   flex: 0 0 $size;
   max-width: $size;
 }

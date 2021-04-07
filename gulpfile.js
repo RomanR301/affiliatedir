@@ -17,7 +17,6 @@ let path = {
     php: source_folder + '/php/*.php',
     css: source_folder + '/scss/style.scss',
     js: source_folder + '/js/script.js',
-    // libs: source_folder + '/libs/*.js',
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp,json}',
     fonts: source_folder + '/fonts/*.{ttf,otf,woff,woff2}',
   },
@@ -38,7 +37,6 @@ let {src, dest} = require('gulp'),
   fileinclude = require('gulp-file-include'),
   del = require('del'),
   scss = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
   group_media = require('gulp-group-css-media-queries'),
   clean_css = require('gulp-clean-css'),
   rename = require("gulp-rename"),
@@ -80,10 +78,6 @@ function css(){
     .pipe(
       group_media()
     )
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 5 versions'],
-      cascade: true
-    }))
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(

@@ -56,6 +56,37 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
+
+      $(document).on('click', '.search i', function () {
+        $('.form-group').toggleClass('active');
+        });
+      $(document).on("click", function(event){
+            var $trigger = $(".search");
+            if($trigger !== event.target && !$trigger.has(event.target).length){
+              $('.form-group').removeClass('active')
+            }            
+        });
+      $('.menu-item-has-children').hover(function () {
+            $(this).addClass('hovered');
+        },
+        function () {
+            $(this).removeClass('hovered'); 
+        });
+
+      if(window.matchMedia('(max-width: 1400px)').matches){
+        $(document).on('click', '.has-sub-menu .icon-arrow', function(){
+          
+          if ($(this).hasClass('open') ) {
+            $(this).removeClass('open');
+            $(this).next('.sub-menu').hide();
+            $(this).prev('a').removeClass('active');
+          } else {
+            $(this).addClass('open');
+            $(this).next('.sub-menu').show();
+            $(this).prev('a').addClass('active');
+          }
+        })
+      }
   }
 };
 
