@@ -22,7 +22,7 @@
 .row {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 -15px;
+  margin: 0 -12px;
 }
 .m-row {
   display: flex;
@@ -103,7 +103,7 @@
 @for $i from 1 through 12 {
   .col-xs-#{$i} {
     @include grid-size(8.333333% * $i);
-    padding: 0 15px;
+    padding: 0 12px;
   }
 }
 
@@ -111,7 +111,7 @@
   @for $i from 1 through 12 {
     .col-sm-#{$i} {
       @include grid-size(8.333333% * $i);
-      padding: 0 15px;
+      padding: 0 12px;
     }
   }
 }
@@ -120,7 +120,7 @@
   @for $i from 1 through 12 {
     .col-md-#{$i} {
       @include grid-size(8.333333% * $i);
-      padding: 0 15px;
+      padding: 0 12px;
     }
   }
 }
@@ -129,7 +129,7 @@
   @for $i from 1 through 12 {
     .col-lg-#{$i} {
       @include grid-size(8.333333% * $i);
-      padding: 0 15px;
+      padding: 0 12px;
     }
   }
 }
@@ -138,7 +138,7 @@
   @for $i from 1 through 12 {
     .col-xl-#{$i} {
       @include grid-size(8.333333% * $i);
-      padding: 0 15px;
+      padding: 0 12px;
     }
   }
 }
@@ -149,7 +149,7 @@
   @for $i from 1 through 12 {
     .col-exs-#{$i} {
       @include grid-size(8.333333% * $i);
-      padding: 0 15px;
+      padding: 0 12px;
     }
   }
 }

@@ -9,7 +9,7 @@
   z-index: 1020;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   &-top {
-    padding: 15px 0;
+    padding: 10px 0;
     background: $whiteColor;
     & .container {
       display: flex;
@@ -145,12 +145,6 @@
     padding: 13px 0;
     display: block;
     @include transition(.3);
-    &:before {
-
-    }
-    &:after {
-
-    }
     &:hover {
       background: rgba(0, 0, 0, 0.0001);
       color: $darkGreen;
@@ -227,9 +221,9 @@
 
 
 .body-padding {
-  padding-top: 70px;
+ height: 100px;
   @media (min-width: $breakpoint-xxl) {
-    padding-top: 90px;
+    // padding-top: 90px;
   }
 }
 

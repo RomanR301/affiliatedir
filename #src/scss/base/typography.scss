@@ -78,9 +78,18 @@
 }
 
 .section-heading {
-  font-weight: 900;
-  @include fontSize(36, 56);
-  line-height: 1;
+  font-family: 'WorkSans', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  color: $blackColor;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.section-subheading {
+  color: $grayColor;
+  font-size: 14px;
+  text-align: center;
 }
 
 
