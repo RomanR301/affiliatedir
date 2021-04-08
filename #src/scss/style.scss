@@ -10,6 +10,7 @@
 // @import "./base/animation.scss";
 
 // ui-kit
+@import "./ui-kit/accordion/_accordion.scss";
 // @import "./ui-kit/breadkrumb/_breadkrumb.scss";
 // @import "./ui-kit/pagination-wocommerce/_pagination-wocommerce";
 // @import "./ui-kit/seo-component/_seo-component.scss";
@@ -27,6 +28,7 @@
 // components
 
 @import "./components/buttons.scss";
+@import "./components/newsletter.scss";
 // @import "./components/entry-content.scss";
 // @import "./components/forms.scss";
 // @import "./components/other.scss";
