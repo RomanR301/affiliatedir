@@ -106,10 +106,10 @@ section.recommendations {
 
 .background-grid {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: -15%;
+  top: -25%;
+  width: 130%;
+  height: 150%;
   background-image: url('../img/background-grid.svg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -123,6 +123,7 @@ section.recommendations {
     position: relative;
     display: flex;
     padding: 30px 40px;
+    overflow: hidden;
   }
   &__image {
     width: 35%;
