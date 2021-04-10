@@ -130,6 +130,9 @@ section.recommendations {
     display: flex;
     align-items: center;
     z-index: 2;
+    @media (max-width: $breakpoint-xl) {
+      width: 40%;
+    }
     &_background {
       width: 185px;
       height: calc(100% - 20px);
@@ -150,6 +153,9 @@ section.recommendations {
     width: 65%;
     color: $whiteColor;
     z-index: 2;
+    @media (max-width: $breakpoint-xl) {
+      width: 60%;
+    }
     & h3 {
       font-size: 30px;
       margin-bottom: 8px;

@@ -48,6 +48,11 @@
   width: 100%;
 }
 
+.hidden-lg {
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}
 .align-self-middle {
   align-self: center;
 }
