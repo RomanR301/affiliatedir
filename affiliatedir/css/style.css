@@ -1774,6 +1774,9 @@ section.recommendations .col-12 {
   padding: 4px 10px;
   color: #ffffff;
   font-size: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .programs-list .rev-share-cell {
@@ -2649,6 +2652,17 @@ section.recommendations .col-12 {
     justify-content: flex-start;
   }
 
+  .cards-tabs .tabs-list::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 2px;
+  }
+
+  .cards-tabs .tabs-list::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+
   .cards-tabs .tabs-wrap {
     max-width: 500px;
     margin: auto;
@@ -2771,6 +2785,7 @@ section.recommendations .col-12 {
 
   .programs-list .affiliate-programs-cell div {
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -2784,6 +2799,8 @@ section.recommendations .col-12 {
 
   .programs-list .affiliate-programs-cell span {
     min-width: 86px;
+    max-width: 86px;
+    padding: 4px 8px;
   }
 
   .pagination {

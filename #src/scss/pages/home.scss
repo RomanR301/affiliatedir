@@ -74,6 +74,16 @@ section.recommendations {
       @media (max-width: $breakpoint-md) {
         overflow-x: auto;
         justify-content: flex-start;
+        &::-webkit-scrollbar {
+          -webkit-appearance: none;
+          height: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background-color: rgba(0,0,0,.2);
+          box-shadow: 0 0 1px rgba(255,255,255,.2);
+        } 
+      
       }
     }
     @media (max-width: $breakpoint-lg) {
@@ -468,7 +478,7 @@ section.recommendations {
       align-items: flex-start;
       @media (max-width: $breakpoint-md) {
         flex-direction: row;
-        // justify-content: space-between;
+        justify-content: space-between;
         width: 100%;
         & h4 {
           margin-right: 10px;
@@ -496,8 +506,13 @@ section.recommendations {
       padding: 4px 10px;
       color: $whiteColor;
       font-size: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @media (max-width: $breakpoint-md) {
         min-width: 86px;
+        max-width: 86px;
+        padding: 4px 8px;
       }
     }
   }
