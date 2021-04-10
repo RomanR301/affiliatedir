@@ -9,8 +9,12 @@ section.reviews,
 section.faq,
 section.recommendations {
   margin-bottom: 80px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
   & .col-12 {
     margin-bottom: 30px;
+    padding: 0 16px;
   }
 }
 
@@ -49,16 +53,48 @@ section.recommendations {
 
 .cards {
   margin-top: 50px;
+  @media (max-width: $breakpoint-md) {
+    margin-top: 35px;
+  }
   & .col-lg-3 {
     margin-bottom: 24px;
   }
   & .view-more-btn {
     margin-top: 10px;
   }
+  & .container:last-child {
+    @media (max-width: $breakpoint-md) {
+      padding: 0;
+    }
+  }
   &-tabs {
     margin-top: 40px;
     & .tabs-list {
       margin-bottom: 35px;
+      @media (max-width: $breakpoint-md) {
+        overflow-x: auto;
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 20px;
+      & .tabs-list {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      & .tabs-wrap {
+        max-width: 500px;
+        margin: auto;
+        padding: 30px 16px;
+      }
+      & .tabs-list__item_link {
+        padding: 12px 20px;
+      }
+      & .tabs-list__item {
+        margin: 0 12px;
+      }
     }
   }
   &-item {
@@ -114,6 +150,10 @@ section.recommendations {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
+  @media (max-width: $breakpoint-md) {
+    height: 100%;
+    top: 0;
+  }
 }
 .banner {
   &-inner {
@@ -124,6 +164,10 @@ section.recommendations {
     display: flex;
     padding: 30px 40px;
     overflow: hidden;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      padding: 34px 24px;
+    }
   }
   &__image {
     width: 35%;
@@ -132,6 +176,10 @@ section.recommendations {
     z-index: 2;
     @media (max-width: $breakpoint-xl) {
       width: 40%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      margin-bottom: 26px;
     }
     &_background {
       width: 185px;
@@ -147,6 +195,13 @@ section.recommendations {
       left: 65px;
       object-position: left;
       width: 290px;
+      @media (max-width: $breakpoint-lg) {
+        width: 220px;
+      }
+      @media (max-width: $breakpoint-md) {
+        top: 170px;
+        width: 250px;
+      }
     }
   }
   &__content {
@@ -155,6 +210,9 @@ section.recommendations {
     z-index: 2;
     @media (max-width: $breakpoint-xl) {
       width: 60%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
     }
     & h3 {
       font-size: 30px;
@@ -233,13 +291,28 @@ section.recommendations {
   position: relative;
   height: 100%;
   @include transition(.3);
+  @media (max-width: $breakpoint-md) {
+    min-height: 400px;
+  }
   &__image {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
     & img {
       @include defaultIcon(cover);
       @include transition(.3);
+    }
+    @media (max-width: $breakpoint-md) {
+      &:before {
+        content: '';
+        background: rgba(0,0,0,.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   &:hover {
@@ -280,6 +353,11 @@ section.recommendations {
   }
 }
 .programs-list {
+  & .table-row {
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
+  }
   &-table {
     width: 100%;
     border: 1px solid #EBEBEB;
@@ -289,6 +367,9 @@ section.recommendations {
     }
     & tr {
       border-bottom: 1px solid #EBEBEB;
+      &:last-child {
+        border: none;
+      }
     }
     & th {
       color: $grayColor;
@@ -298,9 +379,84 @@ section.recommendations {
       text-align: left;
       vertical-align: middle;
       padding: 12px 24px;
+      @media (max-width: $breakpoint-lg) {
+        padding: 10px 6px;
+        font-size: 14px;
+      }
+      @media (max-width: $breakpoint-md) {
+        padding: 10px;
+      }
+    }
+    @media (max-width: $breakpoint-lg) {
+      & .rating-stars .star, .rating-stars .star-filled {
+        margin-right: 2px;
+      }
+    }
+    @media (max-width: $breakpoint-md) {
+      & .rating-stars .star, .rating-stars .star-filled {
+        margin-right: 4px;
+      }
     }
     & .btn-secondary {
       margin-right: 5px;
+    }
+    @media (max-width: $breakpoint-md) {
+      table { 
+          width: 100%; 
+      }
+      table, thead, tbody, th, td, tr { 
+        display: block; 
+      }
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      td { 
+        border: none;
+        position: relative;
+        padding-left: 158px;
+        &[data-column="Ratings"] {
+          padding-bottom: 75px;
+        } 
+      }
+      td:before { 
+        position: absolute;
+        top: 11px;
+        left: 14px;
+        width: 160px; 
+        font-size: 13px;
+        padding-right: 10px; 
+        color: #777777;
+        white-space: nowrap;
+        content: attr(data-column);
+      }
+      td:after {
+        content: ':';
+        position: absolute;
+        left: 140px;
+        color: #777777;
+        font-size: 17px;
+        top: 6px;
+        
+      }
+    }
+    & .button-group {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 12px;
+      & .btn-secondary {
+        flex: 1;
+        margin: 0 12px 0 0;
+      }
+      & .btn-primary {
+        flex: 1;
+      }
     }
   }
   & .affiliate-programs-cell {
@@ -310,6 +466,14 @@ section.recommendations {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      @media (max-width: $breakpoint-md) {
+        flex-direction: row;
+        // justify-content: space-between;
+        width: 100%;
+        & h4 {
+          margin-right: 10px;
+        }
+      }
     }
     & img {
       width: 40px;
@@ -318,6 +482,9 @@ section.recommendations {
       margin-right: 16px;
       object-fit: cover;
       filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15));
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
     & h4 {
       color: #222222;
@@ -329,6 +496,9 @@ section.recommendations {
       padding: 4px 10px;
       color: $whiteColor;
       font-size: 9px;
+      @media (max-width: $breakpoint-md) {
+        min-width: 86px;
+      }
     }
   }
   & .rev-share-cell {
@@ -336,7 +506,47 @@ section.recommendations {
   }
 }
 
+.pagination {
+  align-items: center;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  display: none;
+  &-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  & .page-numbers {
+    width: 32px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #EBEBEB;
+    &:last-child {
+      border-right: none;
+    }
+    &.active {
+      color: $whiteColor;
+      background: #1A4540;
+    }
+  }
+  & .prev-page, .next-page {
+    width: 51px;
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .pagination {
+    display: flex;
+  }
+}
 .reviews {
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+  & .col-xs-12 {
+    margin-bottom: 16px;
+  }
   &-item {
     background: #FFFFFF;
     border: 1px solid #EBEBEB;
@@ -418,8 +628,16 @@ section.recommendations {
 }
 
 .recommendations {
+  & .col-lg-4 {
+    margin-bottom: 24px;
+  }
   & .cards__image {
     height: 170px;
+  }
+  & .row {
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
   }
 }
 

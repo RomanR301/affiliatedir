@@ -155,8 +155,8 @@ body {
   color: #333333;
   font-family: 'WorkSans', sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.1;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .no-focus-outline a:focus,
@@ -560,7 +560,6 @@ input[type=number] {
 .tabs-list__item_link.active {
   font-weight: 700;
   color: #1A4540;
-  background: rgba(0, 0, 0, 0.0001);
   box-shadow: inset 0px -2px 0px #1A4540;
 }
 
@@ -706,6 +705,7 @@ input[type=number] {
   left: 0;
   font-size: 12px;
   color: #1E172F;
+  line-height: 1;
 }
 
 .newsletter__form label span {
@@ -1130,7 +1130,7 @@ input[type=number] {
   content: "\e900";
   font-family: 'icomoon';
   position: absolute;
-  top: 16px;
+  top: 13px;
   right: -18px;
   margin-left: 4px;
   font-size: 10px;
@@ -1164,9 +1164,12 @@ input[type=number] {
 .hamburger {
   display: none;
   width: 50px;
-  height: 45px;
   position: relative;
   z-index: 22;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  height: 65px;
 }
 
 .hamburger span {
@@ -1258,13 +1261,14 @@ input[type=number] {
   height: 100%;
   left: 0;
   top: 0;
-  background: url("../../img/background-grid-footer.svg");
+  background: url("../img/background-grid-footer.svg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
 }
 
 .footer-column {
+  padding: 0 12px;
   z-index: 1;
 }
 
@@ -1368,6 +1372,7 @@ section.reviews .col-12,
 section.faq .col-12,
 section.recommendations .col-12 {
   margin-bottom: 30px;
+  padding: 0 16px;
 }
 
 .rating-stars {
@@ -1630,6 +1635,7 @@ section.recommendations .col-12 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .blog-item-wide__image img {
@@ -1698,6 +1704,10 @@ section.recommendations .col-12 {
   border-bottom: 1px solid #EBEBEB;
 }
 
+.programs-list-table tr:last-child {
+  border: none;
+}
+
 .programs-list-table th {
   color: #777777;
   font-size: 14px;
@@ -1712,6 +1722,25 @@ section.recommendations .col-12 {
 
 .programs-list-table .btn-secondary {
   margin-right: 5px;
+}
+
+.programs-list-table .button-group {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.programs-list-table .button-group .btn-secondary {
+  flex: 1;
+  margin: 0 12px 0 0;
+}
+
+.programs-list-table .button-group .btn-primary {
+  flex: 1;
 }
 
 .programs-list .affiliate-programs-cell {
@@ -1749,6 +1778,46 @@ section.recommendations .col-12 {
 
 .programs-list .rev-share-cell {
   color: #3EA950;
+}
+
+.pagination {
+  align-items: center;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  display: none;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination .page-numbers {
+  width: 32px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #EBEBEB;
+}
+
+.pagination .page-numbers:last-child {
+  border-right: none;
+}
+
+.pagination .page-numbers.active {
+  color: #ffffff;
+  background: #1A4540;
+}
+
+.pagination .prev-page,
+.pagination .next-page {
+  width: 51px;
+}
+
+.reviews .col-xs-12 {
+  margin-bottom: 16px;
 }
 
 .reviews-item {
@@ -1833,6 +1902,10 @@ section.recommendations .col-12 {
   grid-column: 2/3;
   grid-row: 2/3;
   text-align: left;
+}
+
+.recommendations .col-lg-4 {
+  margin-bottom: 24px;
 }
 
 .recommendations .cards__image {
@@ -2226,6 +2299,10 @@ section.recommendations .col-12 {
     max-width: unset;
   }
 
+  .header-top {
+    padding: 18px 0;
+  }
+
   .header-top .container {
     height: 100%;
     max-width: 100%;
@@ -2343,6 +2420,10 @@ section.recommendations .col-12 {
     padding: 0 0 20px 0;
   }
 
+  .body-padding {
+    height: 65px;
+  }
+
   .header-bottom {
     position: fixed;
     top: 64px;
@@ -2364,9 +2445,68 @@ section.recommendations .col-12 {
   .hamburger {
     display: block;
   }
+
+  .footer-column.logo-column {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .cards-tabs {
+    margin-top: 20px;
+  }
+
+  .cards-tabs .tabs-list {
+    margin: 0;
+  }
+
+  .banner__image_main {
+    width: 220px;
+  }
+
+  .programs-list-table td,
+  .programs-list-table th {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+
+  .programs-list-table .rating-stars .star,
+  .programs-list-table .rating-stars .star-filled {
+    margin-right: 2px;
+  }
 }
 
 @media (max-width: 767px) {
+  .newsletter {
+    transform: translate(-50%, -250px);
+    width: 95%;
+  }
+
+  .newsletter__content {
+    padding: 32px 24px 24px 24px;
+    background-position: 100% 100%;
+  }
+
+  .newsletter p {
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .newsletter__form {
+    flex-direction: column;
+  }
+
+  .newsletter__form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .newsletter__form .form-group.form-submit {
+    width: 100%;
+    margin: 0;
+  }
+
   .header-lang {
     border-top: 1px solid #d6d6d6;
     width: 100%;
@@ -2448,6 +2588,214 @@ section.recommendations .col-12 {
 
   .menu-item-has-children.active:after {
     transform: rotate(180deg) !important;
+  }
+
+  .footer {
+    margin-top: 350px;
+  }
+
+  .footer-main {
+    padding: 80px 0 0 0;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer-column.logo-column {
+    justify-content: flex-start;
+  }
+
+  .footer-copyright {
+    padding: 0 0 20px 0;
+  }
+
+  .footer-copyright .footer-column {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  .footer-copyright .footer__link {
+    margin: 0;
+  }
+
+  .footer-copyright .copyright-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  section.cards,
+  section.banner,
+  section.blog,
+  section.programs-list,
+  section.reviews,
+  section.faq,
+  section.recommendations {
+    margin-bottom: 60px;
+  }
+
+  .cards {
+    margin-top: 35px;
+  }
+
+  .cards .container:last-child {
+    padding: 0;
+  }
+
+  .cards-tabs .tabs-list {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .cards-tabs .tabs-wrap {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px 16px;
+  }
+
+  .cards-tabs .tabs-list__item_link {
+    padding: 12px 20px;
+  }
+
+  .cards-tabs .tabs-list__item {
+    margin: 0 12px;
+  }
+
+  .background-grid {
+    height: 100%;
+    top: 0;
+  }
+
+  .banner-inner {
+    flex-direction: column;
+    padding: 34px 24px;
+  }
+
+  .banner__image {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  .banner__image_main {
+    top: 170px;
+    width: 250px;
+  }
+
+  .banner__content {
+    width: 100%;
+  }
+
+  .blog-item-wide {
+    min-height: 400px;
+  }
+
+  .blog-item-wide__image:before {
+    content: '';
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .programs-list .table-row {
+    margin: 0;
+  }
+
+  .programs-list-table td,
+  .programs-list-table th {
+    padding: 10px;
+  }
+
+  .programs-list-table .rating-stars .star,
+  .programs-list-table .rating-stars .star-filled {
+    margin-right: 4px;
+  }
+
+  .programs-list-table {
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+
+  .programs-list-table table {
+    width: 100%;
+  }
+
+  .programs-list-table table,
+  .programs-list-table thead,
+  .programs-list-table tbody,
+  .programs-list-table th,
+  .programs-list-table td,
+  .programs-list-table tr {
+    display: block;
+  }
+
+  .programs-list-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .programs-list-table td {
+    border: none;
+    position: relative;
+    padding-left: 158px;
+  }
+
+  .programs-list-table td[data-column="Ratings"] {
+    padding-bottom: 75px;
+  }
+
+  .programs-list-table td:before {
+    position: absolute;
+    top: 11px;
+    left: 14px;
+    width: 160px;
+    font-size: 13px;
+    padding-right: 10px;
+    color: #777777;
+    white-space: nowrap;
+    content: attr(data-column);
+  }
+
+  .programs-list-table td:after {
+    content: ':';
+    position: absolute;
+    left: 140px;
+    color: #777777;
+    font-size: 17px;
+    top: 6px;
+  }
+
+  .programs-list .affiliate-programs-cell div {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .programs-list .affiliate-programs-cell div h4 {
+    margin-right: 10px;
+  }
+
+  .programs-list .affiliate-programs-cell img {
+    display: none;
+  }
+
+  .programs-list .affiliate-programs-cell span {
+    min-width: 86px;
+  }
+
+  .pagination {
+    display: flex;
+  }
+
+  .reviews {
+    display: none;
+  }
+
+  .recommendations .row {
+    margin: 0;
   }
 }
 

@@ -1,7 +1,7 @@
 @@include('_header.html')
-<!-- <main>
+<main>
   <section class="cards">
-    <div class="container-fluid">
+    <div class="container">
       <h1 class="section-heading">Categories of Affiliate Programs</h1>
       <p class="section-subheading">Get great affiliates program</p>
     </div>
@@ -45,11 +45,71 @@
               <a href="#" class="btn btn-secondary view-more">View More</a>
             </div>
           </div>
+          <div class="tab-content" id="tab-1">
+            <div class="row">
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+            </div>
+            <div class="row align-center">
+              <a href="#" class="btn btn-secondary view-more">View More</a>
+            </div>
+          </div>
+          <div class="tab-content" id="tab-2">
+            <div class="row">
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+            </div>
+            <div class="row align-center">
+              <a href="#" class="btn btn-secondary view-more">View More</a>
+            </div>
+          </div>
+          <div class="tab-content" id="tab-3">
+            <div class="row">
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+            </div>
+            <div class="row align-center">
+              <a href="#" class="btn btn-secondary view-more">View More</a>
+            </div>
+          </div>
+          <div class="tab-content" id="tab-4">
+            <div class="row">
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+              @@include('_cards-item-component.html')
+            </div>
+            <div class="row align-center">
+              <a href="#" class="btn btn-secondary view-more">View More</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="banner">
+ <section class="banner">
     <div class="container">
       <div class="banner-inner">
         <div class="background-grid"></div>
@@ -70,6 +130,7 @@
       </div>
     </div>
   </section>
+ 
   <section class="blog">
     <div class="container">
       <div class="row align-center">
@@ -82,7 +143,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 col-xs-12">
           <a href="#" class="blog-item-wide">
             <div class="blog-item-wide__image">
               <img src="./img/blog1.jpg" alt="blog image">
@@ -119,22 +180,38 @@
           <p class="section-subheading">Certe inquam pertinax non</p>
         </div>
       </div>
-      <div class="row">
+      
+      <div class="row table-row">
         <div class="programs-list-table">
           <table>
-            <tr>
-              <th>Affiliate Programs</th>
-              <th>Rev Share</th>
-              <th>CPA</th>
-              <th>Sub Aff</th>
-              <th>Ratings</th>
-            </tr>
-            @@include('_affiliate-programs-item-component.html')
-            @@include('_affiliate-programs-item-component.html')
-            @@include('_affiliate-programs-item-component.html')
-            @@include('_affiliate-programs-item-component.html')
-            @@include('_affiliate-programs-item-component.html')
+            <thead>
+              <tr>
+                <th>Affiliate Programs</th>
+                <th>Rev Share</th>
+                <th>CPA</th>
+                <th>Sub Aff</th>
+                <th>Ratings</th>
+              </tr>
+            </thead>
+            <tbody>
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+            </tbody>
           </table>
+        </div>
+      </div>
+      <div class="row pagination-container">
+        <div class="pagination">
+          <div class="page-numbers prev-page">Prev</div>
+          <div class="page-numbers active">1</div>
+          <div class="page-numbers">2</div>
+          <div class="page-numbers">3</div>
+          <div class="page-numbers dots">...</div>
+          <div class="page-numbers">9</div>
+          <div class="page-numbers next-page">Next</div>
         </div>
       </div>
       <div class="row align-center">
@@ -142,6 +219,7 @@
       </div>
     </div>
   </section>
+
   <section class="reviews">
     <div class="container">
       <div class="row align-center">
@@ -154,7 +232,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-xs-12">
           <div class="reviews-item">
             <div class="reviews__data">
               <div class="rating-stars">
@@ -180,7 +258,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-xs-12">
           <div class="reviews-item">
             <div class="reviews__data">
               <div class="rating-stars">
@@ -215,7 +293,7 @@
   <section class="faq">
     <div class="container">
       <div class="row align-center">
-        <div class="col-lg-9">
+        <div class="col-lg-9 col-xs-12">
           <div class="faq-heading">
             <div class="section-icon">
               <img src="./img/icons/icon-faq-big.svg" alt="faq icon">
@@ -285,6 +363,7 @@
       </div>
     </div>
   </section>
+
   <section class="recommendations cards">
     <div class="container">
       <div class="row align-center">
@@ -297,7 +376,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-xs-12">
           <div class="cards-item">
             <a href="#" class="cards__image">
               <img src="./img/card-image2.jpg" alt="rizk">
@@ -327,7 +406,7 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-xs-12">
           <div class="cards-item">
             <a href="#" class="cards__image">
               <img src="./img/card-image2.jpg" alt="rizk">
@@ -357,7 +436,7 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-xs-12">
           <div class="cards-item">
             <a href="#" class="cards__image">
               <img src="./img/card-image2.jpg" alt="rizk">
@@ -390,6 +469,6 @@
       </div>
     </div>
   </section>
-</main> -->
+</main>
 
 @@include('_footer.html')

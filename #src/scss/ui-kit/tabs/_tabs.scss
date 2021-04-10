@@ -29,7 +29,7 @@
         &.active {
           font-weight: 700;
           color: $darkGreen;
-          background: rgba(0, 0, 0, 0.0001);
+          // background: rgba(0, 0, 0, 0.0001);
           box-shadow: inset 0px -2px 0px #1A4540;
         }
       }
