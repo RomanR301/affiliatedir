@@ -1752,25 +1752,6 @@ section.recommendations .col-12 {
   margin-right: 5px;
 }
 
-.programs-list-table .button-group {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 12px;
-}
-
-.programs-list-table .button-group .btn-secondary {
-  flex: 1;
-  margin: 0 12px 0 0;
-}
-
-.programs-list-table .button-group .btn-primary {
-  flex: 1;
-}
-
 .programs-list .affiliate-programs-cell {
   display: flex;
   align-items: center;
@@ -2961,6 +2942,25 @@ section.recommendations .col-12 {
     color: #777777;
     font-size: 17px;
     top: 6px;
+  }
+
+  .programs-list-table .button-group {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .programs-list-table .button-group .btn-secondary {
+    flex: 1;
+    margin: 0 12px 0 0;
+  }
+
+  .programs-list-table .button-group .btn-primary {
+    flex: 1;
   }
 
   .programs-list .affiliate-programs-cell div {

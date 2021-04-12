@@ -453,19 +453,21 @@ section.recommendations {
       }
     }
     & .button-group {
-      position: absolute;
-      bottom: 15px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 12px;
-      & .btn-secondary {
-        flex: 1;
-        margin: 0 12px 0 0;
-      }
-      & .btn-primary {
-        flex: 1;
+      @media (max-width: $breakpoint-md) {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        & .btn-secondary {
+          flex: 1;
+          margin: 0 12px 0 0;
+        }
+        & .btn-primary {
+          flex: 1;
+        }
       }
     }
   }
