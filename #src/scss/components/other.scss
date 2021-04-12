@@ -1,3 +1,35 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+// page header
+
+.page-header {
+  background: linear-gradient(90deg, #161B39 0%, #1A4540 100%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  &__bg {
+    padding: 60px 0 45px 0;
+    background-image: url('../img/background-grid.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  & h1, p {
+    color: $whiteColor;
+    @media (max-width: $breakpoint-lg) {
+      text-align: center;
+    }
+  }
+  & h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  & p {
+    opacity: 0.8;
+    width: 90%;
+    @media (max-width: $breakpoint-lg) {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+
