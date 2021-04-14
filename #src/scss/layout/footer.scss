@@ -7,7 +7,7 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   @media (max-width: $breakpoint-md) {
-    margin-top: 350px;
+    margin-top: 360px;
   }
   &:before {
     content: '';
@@ -23,7 +23,7 @@
   &-main {
     padding: 113px 0 40px;
     @media (max-width: $breakpoint-md) {
-      padding: 80px 0 0 0;
+      padding: 100px 0 0 0;
     }
   }
   & .container {
@@ -94,32 +94,6 @@
       &:before {
         width: 100%;
       }
-    }
-  }
-  &__socials {
-    display: flex;
-    align-items: center;
-    & a {
-      display: block;
-      margin-right: 10px;
-      width: 32px;
-      height: 32px;
-      border-radius: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: $whiteColor;
-      &:hover {
-        & img {
-          transform: scale(1.1);
-        }
-      }
-    }
-    & img {
-      width: 17px;
-      object-fit: contain;
-      display: block;
-      @include transition(.3);
     }
   }
   &-copyright {

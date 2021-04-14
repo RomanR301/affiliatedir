@@ -273,7 +273,7 @@
     display: block;
     @include transition(.3);
     @media (min-width: $breakpoint-lg) {
-      &:hover {
+      &:hover, &.active {
         background: rgba(0, 0, 0, 0.0001);
         color: $darkGreen;
         box-shadow: inset 0px -2px 0px #1A4540;

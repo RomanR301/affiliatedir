@@ -188,3 +188,14 @@
 .icon-icon-instagram:before {
   content: "\e918";
 }
+
+.icon {
+  width: 20px;
+  height: 20px;
+  &-calendar {
+    background: no-repeat center url('../img/icons/icon-calendar.svg');
+  }
+  &-user {
+    background: no-repeat center url('../img/icons/icon-user.svg');
+  }
+}
