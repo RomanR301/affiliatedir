@@ -33,7 +33,14 @@
   }
 }
 
-
+.overlaped-heading {
+  & .page-header__bg {
+    padding-bottom: 100px;
+  }
+  & .container-overlaped {
+    margin-top: -60px;
+  }
+}
 .breadcrumbs {
   margin: 35px 0 20px 0;
   display: flex;
