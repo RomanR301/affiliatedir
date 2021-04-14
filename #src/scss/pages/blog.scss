@@ -164,6 +164,9 @@
     width: 80%;
     margin-bottom: 24px;
     line-height: 1.2;
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
   }
   &__image {
     margin-bottom: 28px;

@@ -345,8 +345,8 @@
 .menu-item-has-children {
   align-items: center;
   position: relative;
-  margin-right: 45px;
   display: block;
+  padding-right: 30px;
   @media (max-width: $breakpoint-md) {
     display: block;
     padding: 0;
@@ -360,13 +360,13 @@
     font-family: 'icomoon';
     position: absolute;
     top: 13px;
-    right: -18px;
+    right: 12px;
     margin-left: 4px;
     font-size: 10px;
     pointer-events: none;
     @include transition(.3);
     @media (max-width: $breakpoint-lg) {
-      top: 19px;
+      top: 17px;
       right: -20px;
     }
     @media (max-width: $breakpoint-md) {
@@ -376,7 +376,7 @@
     }
   }
   @media (max-width: $breakpoint-xl) {
-    margin-right: 40px;
+    margin-right: 28px;
     position: relative;
   }
   @media (min-width: $breakpoint-lg) {
