@@ -2592,13 +2592,17 @@ section.recommendations .col-12 {
   line-height: 1.3;
 }
 
+.page-summary .col-lg-7 p {
+  margin-bottom: 20px;
+}
+
 .summary-card .rating-stars {
   margin-bottom: 10px;
 }
 
 .summary-card .card__image {
   margin-bottom: 14px;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -3513,6 +3517,39 @@ section.recommendations .col-12 {
     margin-right: 20px;
     font-size: 14px;
   }
+
+  .page-summary .page-header p {
+    text-align: left;
+  }
+
+  .page-summary .page-header h1 {
+    text-align: left;
+  }
+
+  .summary-sidebar {
+    display: none;
+  }
+
+  .summary-content .brands-row .col-xs-12 {
+    margin-bottom: 24px;
+  }
+
+  .summary-content .summary__reviews .col-xs-12 {
+    margin-bottom: 20px;
+  }
+
+  #commisions {
+    width: 100%;
+    padding: 0;
+  }
+
+  .summary__contacts_form {
+    margin-top: 35px;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3924,6 +3961,97 @@ section.recommendations .col-12 {
   .contacts-box {
     padding: 32px 16px;
   }
+
+  .page-summary .page-header__bg {
+    padding-top: 30px;
+  }
+
+  .page-summary .col-lg-7 {
+    margin-bottom: 45px;
+  }
+
+  .summary-card {
+    margin: auto auto 14px auto;
+    width: 50%;
+  }
+
+  .summary-content .summary__reviews {
+    margin-bottom: 35px;
+  }
+
+  .summary__table th,
+  .summary__table td {
+    padding: 9px 15px;
+  }
+
+  .summary__table {
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.1);
+    border-radius: 4px;
+    padding: 0;
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+
+  .summary__table table {
+    width: 100%;
+  }
+
+  .summary__table table,
+  .summary__table thead,
+  .summary__table tbody,
+  .summary__table th,
+  .summary__table td,
+  .summary__table tr {
+    display: block;
+  }
+
+  .summary__table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .summary__table td {
+    border: none;
+    position: relative;
+    padding-left: 180px;
+  }
+
+  .summary__table td[data-column="Rev Share"] {
+    color: #3EA950;
+  }
+
+  .summary__table td:before {
+    position: absolute;
+    top: 11px;
+    left: 14px;
+    width: 170px;
+    font-size: 13px;
+    padding-right: 10px;
+    color: #777777;
+    white-space: nowrap;
+    content: attr(data-column);
+  }
+
+  .summary__table td:after {
+    content: ':';
+    position: absolute;
+    left: 160px;
+    color: #777777;
+    font-size: 17px;
+    top: 6px;
+  }
+
+  .game-types-list,
+  .tracking-list {
+    height: auto;
+  }
+
+  .tracking-list {
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -3945,6 +4073,10 @@ section.recommendations .col-12 {
 
   .programs-search .form-group.form-select {
     margin-top: 16px;
+  }
+
+  .summary-card {
+    width: 100%;
   }
 }
 
