@@ -2797,7 +2797,7 @@ section.recommendations .col-12 {
   display: block;
   width: 18px;
   height: 18px;
-  background: no-repeat center url("../../img/icons/icon-checkmark.svg");
+  background: no-repeat center url("../img/icons/icon-checkmark.svg");
   background-size: cover;
 }
 
