@@ -612,6 +612,8 @@ section.recommendations {
     & p {
       grid-column: 2/3;
       grid-row: 1/2;
+      font-weight: 700;
+      color: $blackColor;
     }
     & span {
       grid-column: 2/3;
