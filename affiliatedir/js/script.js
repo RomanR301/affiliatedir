@@ -169,13 +169,13 @@ document.body.addEventListener('keyup', function(e) {
 
 $('.summary-sidebar__link').click(function(){
   $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top - 495
+      scrollTop: $( $(this).attr('href') ).offset().top - 390
   }, 500);
   return false;
 });
 
 const highlightScroll = () => {
-  const scrollPos =  window.pageYOffset + 500
+  const scrollPos =  window.pageYOffset + 400
   const links = document.querySelectorAll('.summary-sidebar__link')
   const scrollLine = document.querySelector('.scroll-spy-line')
 
@@ -206,6 +206,10 @@ const highlightScroll = () => {
     $('.scroll-line').css('transform', 'translate(0,350px)')
   } else if ($('.summary-sidebar__link:nth-of-type(9)').hasClass('active')) {
     $('.scroll-line').css('transform', 'translate(0,400px)')
+  } else if ($('.summary-sidebar__link:nth-of-type(10)').hasClass('active')) {
+    $('.scroll-line').css('transform', 'translate(0,450px)')
+  } else if ($('.summary-sidebar__link:nth-of-type(11)').hasClass('active')) {
+    $('.scroll-line').css('transform', 'translate(0,500px)')
   }
 
   
