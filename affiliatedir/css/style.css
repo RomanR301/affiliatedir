@@ -3104,6 +3104,38 @@ section.recommendations .col-12 {
   border-color: #043e6f;
 }
 
+.other-page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #161b39 0, #1a4540 64.23%);
+  overflow: hidden;
+}
+
+.other-page .container,
+.other-page .row {
+  height: 100%;
+}
+
+.other-page .col-xs-12 {
+  text-align: center;
+}
+
+.other-page h1 {
+  font-size: 150px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.other-page p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.other-page .btn:hover {
+  color: #ffffff;
+}
+
 @media (min-width: 576px) {
   .col-sm-1 {
     flex: 0 0 8.33333%;
@@ -4495,6 +4527,10 @@ section.recommendations .col-12 {
 
   .sign-in-link {
     margin-top: 30px;
+  }
+
+  .other-page h1 {
+    font-size: 60px;
   }
 }
 
