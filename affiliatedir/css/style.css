@@ -3012,12 +3012,14 @@ section.recommendations .col-12 {
 
 .login-form {
   width: 35vw;
-  padding: 4vh 4vw;
+  padding: 4vh 3vw 4vh 4vw;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .login-image {
   width: 65vw;
-  height: calc(100% + 20px);
+  height: calc(100% + 30px);
 }
 
 .login-image img {
@@ -3068,15 +3070,13 @@ section.recommendations .col-12 {
 
 .login .phone-container select {
   width: 3.5vw;
+  font-size: .7vw;
 }
 
 .login .phone-container:before {
   top: calc(50% - .9vh);
   font-size: .6vw;
-}
-
-.login .form-checkbox label {
-  font-size: .9vw;
+  left: 2.1vw;
 }
 
 .login .form-submit {
@@ -3467,9 +3467,59 @@ section.recommendations .col-12 {
   }
 }
 
+@media (min-width: 2000px) {
+  .form-checkbox input:checked + label:after {
+    top: 4px;
+    left: 8px;
+    width: 6px;
+    height: 14px;
+  }
+
+  .form-checkbox label:before {
+    padding: 10px;
+  }
+
+  .login .form-checkbox label {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .login .phone-container:before {
+    top: calc(50% - .8vh);
+    left: 2.2vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .login .form-group label {
+    font-size: 12px;
+  }
+
+  .login .form-group input {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .login .phone-container select {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .login .phone-container:before {
+    left: 37px;
+    top: 13px;
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 1200px) {
   .newsletter {
     width: 90%;
+  }
+
+  .form-checkbox input:checked + label:after {
+    top: 3px;
   }
 
   .search input {
@@ -3500,6 +3550,39 @@ section.recommendations .col-12 {
 
   .faq-single .container {
     margin: -50px 15px 0 15px;
+  }
+
+  .login-form {
+    padding: 4vh 4vw;
+  }
+
+  .login-image img {
+    margin: 0;
+  }
+
+  .login-logo {
+    width: 180px;
+  }
+
+  .login-heading {
+    font-size: 28px;
+  }
+
+  .login-helper {
+    font-size: 16px;
+  }
+
+  .login .form-checkbox label {
+    font-size: 14px;
+  }
+
+  .login .form-submit {
+    width: 150px;
+    height: 40px;
+  }
+
+  .sign-in-link {
+    font-size: 14px;
   }
 }
 
@@ -3773,6 +3856,14 @@ section.recommendations .col-12 {
     padding: 0;
     box-shadow: none;
     background: transparent;
+  }
+
+  .login-form {
+    width: 45vw;
+  }
+
+  .login-image {
+    width: 55vw;
   }
 }
 
@@ -4366,6 +4457,44 @@ section.recommendations .col-12 {
     margin-right: 20px;
     font-size: 14px;
     color: #777777;
+  }
+
+  .login {
+    overflow: initial;
+  }
+
+  .login-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login-image {
+    display: none;
+  }
+
+  .login-logo img {
+    width: 175px;
+  }
+
+  .login-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-heading {
+    margin-top: 60px;
+  }
+
+  .sign-in-link {
+    margin-top: 30px;
   }
 }
 

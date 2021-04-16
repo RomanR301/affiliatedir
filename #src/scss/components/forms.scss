@@ -97,6 +97,15 @@
       border: solid $whiteColor;
       border-width: 0 1px 1px 0;
       transform: rotate(45deg);
+      @media (min-width: 2000px) {
+        top: 4px;
+        left: 8px;
+        width: 6px;
+        height: 14px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        top: 3px;
+      }
     }
     &:checked + label:before {
       background: $primaryColor;
@@ -120,6 +129,9 @@
       background: #FBFBFB;
       border: 0.5px solid #C1C1C1;
       border-radius: 2px;
+      @media (min-width: 2000px) {
+        padding: 10px;
+      }
     }
   }
 }
