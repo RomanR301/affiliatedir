@@ -49,4 +49,12 @@
       border-color: $whiteColor;
     }
   }
+  &-white {
+    background: $whiteColor;
+    color: $primaryColor;
+    &:hover {
+      background: $primaryColor;
+      color: $whiteColor;
+    }
+  }
 }

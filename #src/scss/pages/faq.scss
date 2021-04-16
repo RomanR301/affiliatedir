@@ -15,6 +15,12 @@
       padding: 15px;
     }
   }
+  & .container-overlaped {
+    max-width: 860px;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+    }
+  }
   & .tabs-wrap {
     padding-top: 0;
     @media (max-width: $breakpoint-md) {
@@ -49,12 +55,12 @@
       font-size: 18px;
       font-weight: 400;
     }
-    .tabs-list__item_link.active {
-      background: linear-gradient(180deg, #287068 0%, #1a4540 100%);
-      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05);
-      border-radius: 4px;
-      color: $whiteColor;
-    }
+    // .tabs-list__item_link.active {
+    //   background: linear-gradient(180deg, #287068 0%, #1a4540 100%);
+    //   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05);
+    //   border-radius: 4px;
+    //   color: $whiteColor;
+    // }
   }
 }
 

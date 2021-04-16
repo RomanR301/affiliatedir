@@ -700,6 +700,16 @@ input[type=number] {
   border-color: #ffffff;
 }
 
+.btn-white {
+  background: #ffffff;
+  color: #161B39;
+}
+
+.btn-white:hover {
+  background: #161B39;
+  color: #ffffff;
+}
+
 .newsletter {
   z-index: 55;
   position: absolute;
@@ -2654,6 +2664,10 @@ section.recommendations .col-12 {
   line-height: 1.3;
 }
 
+.page-summary .page-header h1 {
+  font-size: 36px;
+}
+
 .page-summary .col-lg-7 p {
   margin-bottom: 20px;
 }
@@ -2786,9 +2800,9 @@ section.recommendations .col-12 {
 }
 
 .summary-content h2 {
-  margin-bottom: 24px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .summary-content h3 {
@@ -2961,6 +2975,10 @@ section.recommendations .col-12 {
   padding: 30px;
 }
 
+.faq-single .container-overlaped {
+  max-width: 860px;
+}
+
 .faq-single .tabs-wrap {
   padding-top: 0;
 }
@@ -2993,13 +3011,6 @@ section.recommendations .col-12 {
 .faq-single .tabs-list .tabs-list__item_link {
   font-size: 18px;
   font-weight: 400;
-}
-
-.faq-single .tabs-list .tabs-list__item_link.active {
-  background: linear-gradient(180deg, #287068 0%, #1a4540 100%);
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  color: #ffffff;
 }
 
 .login {
@@ -3889,6 +3900,10 @@ section.recommendations .col-12 {
     padding: 0;
     box-shadow: none;
     background: transparent;
+  }
+
+  .faq-single .container-overlaped {
+    max-width: 100%;
   }
 
   .login-form {

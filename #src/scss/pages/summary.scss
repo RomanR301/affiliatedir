@@ -15,6 +15,7 @@
     }
   }
   & .page-header h1 {
+    font-size: 36px;
     @media (max-width: $breakpoint-lg) {
       text-align: left;
     }
@@ -176,9 +177,9 @@
     }
   }
   & h2 {
-    margin-bottom: 24px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
+    margin-bottom: 10px;
   }
   & h3 {
     font-size: 18px;
