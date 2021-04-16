@@ -28,7 +28,9 @@
   }
   & .btn {
     &:hover {
-      color: $whiteColor;
+      border-color: $whiteColor;
+      background: $whiteColor;
+      // color: $whiteColor;
     }
   }
 }

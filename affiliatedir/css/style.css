@@ -3133,7 +3133,8 @@ section.recommendations .col-12 {
 }
 
 .other-page .btn:hover {
-  color: #ffffff;
+  border-color: #ffffff;
+  background: #ffffff;
 }
 
 @media (min-width: 576px) {
