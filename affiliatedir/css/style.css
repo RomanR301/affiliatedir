@@ -967,6 +967,68 @@ input[type=number] {
   border-radius: 0 2px 2px 0;
 }
 
+.form-checkbox {
+  margin-bottom: 20px;
+}
+
+.form-checkbox a {
+  color: #043e6f;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease-out;
+}
+
+.form-checkbox a:hover {
+  border-color: #043e6f;
+}
+
+.form-checkbox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-checkbox input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.form-checkbox input:checked + label:before {
+  background: #161B39;
+  border-color: #161B39;
+}
+
+.form-checkbox label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-checkbox label:before {
+  content: '';
+  -webkit-appearance: none;
+  padding: 6px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  background-color: transparent;
+  background: #FBFBFB;
+  border: 0.5px solid #C1C1C1;
+  border-radius: 2px;
+}
+
 .container {
   max-width: 1155px;
   margin: auto;
@@ -2938,6 +3000,108 @@ section.recommendations .col-12 {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   color: #ffffff;
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-form {
+  width: 35vw;
+  padding: 4vh 4vw;
+}
+
+.login-image {
+  width: 65vw;
+  height: calc(100% + 20px);
+}
+
+.login-image img {
+  margin-left: 25px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-logo {
+  display: flex;
+  margin-bottom: 4.2vh;
+  width: 10vw;
+}
+
+.login-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.login-heading {
+  font-size: 1.6vw;
+  font-weight: 700;
+  color: #1A4540;
+}
+
+.login-helper {
+  font-size: 1vw;
+  color: #777777;
+  margin-bottom: 3vh;
+}
+
+.login .form-group {
+  margin-bottom: 2.2vh;
+}
+
+.login .form-group label {
+  font-size: 0.65vw;
+}
+
+.login .form-group input {
+  height: 4.2vh;
+  font-size: .7vw;
+}
+
+.login .phone-container select {
+  width: 3.5vw;
+}
+
+.login .phone-container:before {
+  top: calc(50% - .9vh);
+  font-size: .6vw;
+}
+
+.login .form-checkbox label {
+  font-size: .9vw;
+}
+
+.login .form-submit {
+  width: 8.5vw;
+  height: 4.2vh;
+}
+
+.login .form-submit .btn {
+  width: 100%;
+  height: 100%;
+}
+
+.sign-in-link {
+  margin-top: 9vh;
+  font-size: .9vw;
+}
+
+.sign-in-link a {
+  color: #043e6f;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease-out;
+}
+
+.sign-in-link a:hover {
+  border-color: #043e6f;
 }
 
 @media (min-width: 576px) {

@@ -1,0 +1,84 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  &-form {
+    width: 35vw;
+    padding: 4vh 4vw;
+  }
+  &-image {
+    width: 65vw;
+    height: calc(100% + 20px);
+    & img {
+      margin-left: 25px;
+      @include defaultIcon(cover);
+    }
+  }
+  &-logo {
+    display: flex;
+    margin-bottom: 4.2vh;
+    width: 10vw;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &-heading {
+    font-size: 1.6vw;
+    font-weight: 700;
+    color: $darkGreen;
+  }
+  &-helper {
+    font-size: 1vw;
+    color: $grayColor;
+    margin-bottom: 3vh;
+  }
+  & .form-group {
+    margin-bottom: 2.2vh;
+    & label {
+      font-size: 0.65vw;
+    }
+    & input {
+      height: 4.2vh;
+      font-size: .7vw;
+    }
+  }
+  & .phone-container {
+    & select {
+      width: 3.5vw;
+    }
+    &:before {
+      top: calc(50% - .9vh);
+      font-size: .6vw;
+    }
+  }
+  & .form-checkbox {
+    label {
+      font-size: .9vw;
+    }
+  }
+  & .form-submit {
+    width: 8.5vw;
+    height: 4.2vh;
+    & .btn {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.sign-in-link {
+  margin-top: 9vh;
+  font-size: .9vw;
+  & a {
+    color: rgba(4, 62, 111, 1);
+    border-bottom: 1px solid transparent;
+    @include transition(.3);
+    &:hover {
+      border-color: rgba(4, 62, 111, 1);
+    }
+  }
+}
