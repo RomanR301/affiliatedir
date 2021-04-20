@@ -1816,6 +1816,13 @@ section.recommendations .col-12 {
   width: 290px;
 }
 
+.banner__image_single {
+  display: block;
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .banner__content {
   width: 65%;
   color: #ffffff;
@@ -2212,6 +2219,11 @@ section.recommendations .col-12 {
   left: 4%;
   height: 90%;
   object-fit: contain;
+}
+
+.about-content .intro-image .single-image {
+  display: block;
+  width: 100%;
 }
 
 .about-content h2 {
@@ -2666,6 +2678,7 @@ section.recommendations .col-12 {
 
 .page-summary .page-header h1 {
   font-size: 36px;
+  line-height: 1.3;
 }
 
 .page-summary .col-lg-7 p {
@@ -2779,6 +2792,10 @@ section.recommendations .col-12 {
 
 .summary-content {
   margin-top: 50px;
+}
+
+.summary-content .accordion-container {
+  margin-bottom: 30px;
 }
 
 .summary-content .breadcrumbs {
@@ -3875,6 +3892,7 @@ section.recommendations .col-12 {
 
   .page-summary .page-header h1 {
     text-align: left;
+    font-size: 28px;
   }
 
   .summary-sidebar {
@@ -4137,6 +4155,10 @@ section.recommendations .col-12 {
   .banner__image_main {
     top: 170px;
     width: 250px;
+  }
+
+  .banner__image_single {
+    width: 100%;
   }
 
   .banner__content {

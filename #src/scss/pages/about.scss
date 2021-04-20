@@ -30,6 +30,10 @@
           object-position: left;
         }
       }
+      & .single-image {
+        display: block;
+        width: 100%;
+      }
     }
     & h2 {
       font-size: 30px;

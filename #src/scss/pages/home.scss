@@ -212,6 +212,15 @@ section.recommendations {
         width: 250px;
       }
     }
+    &_single {
+      display: block;
+      width: 90%;
+      height: 100%;
+      object-fit: contain;
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+    }
   }
   &__content {
     width: 65%;

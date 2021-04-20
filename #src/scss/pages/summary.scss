@@ -151,6 +151,9 @@
 }
 .summary-content {
   margin-top: 50px;
+  & .accordion-container {
+    margin-bottom: 30px;
+  }
   & .breadcrumbs {
     margin: 0 0 16px 0;
   }
